@@ -1,0 +1,96 @@
+extends layouts/main
+
+block vars
+    - var app = 'default'
+
+block head
+    link(rel='stylesheet', href='/css/styles.css')
+
+block content
+    .works-header <i class="portfolio"></i>
+    .writings-header <i class="coderbase"></i>
+    .user-container
+        .user
+            .photo
+            .name Adam Draper
+        .tweet
+            .handle <i class="twitter"></i> @adamwdraper
+            .text @momentjs enjoyed moment so much, i made a simple formatter for numbers <a href="http://adamwdraper.github.com/Numeral-js/">numeral.js</a> that works much the same way
+    .works-container
+        .project
+            .languages
+                .language.javascript
+            .name Numeral.js <i class="github"></i>
+            .description A javascript library for formatting and manipulating numbers.
+            .stats
+                .stat.stars <i class="star"></i> <span class="count">209</span>
+                .stat.posts <i class="coderbase"></i> <span class="count">3</span>
+        .project
+            .name Appular
+            .description A modular JavaScript organizational schema based on Backbone and RequireJs
+            .stats
+                .stat.posts <i class="coderbase"></i> <span class="count">3</span>
+        .project
+            .languages
+                .language.javascript
+            .name Numeral.js <i class="github"></i>
+            .description A javascript library for formatting and manipulating numbers.
+            .stats
+        .project
+            .languages
+                .language.javascript
+                .language.sass
+            .name Appular <i class="github"></i>
+            .description A modular JavaScript organizational schema based on Backbone and RequireJs
+            .stats
+                .stat.stars <i class="star"></i> <span class="count">209</span>
+        .project
+            .languages
+                .language.javascript
+            .name Numeral.js
+            .description A javascript library for formatting and manipulating numbers.
+            .stats
+        .project
+            .languages
+                .language.javascript
+                .language.sass
+            .name Appular <i class="github"></i>
+            .description A modular JavaScript organizational schema based on Backbone and RequireJs
+            .stats
+                .stat.posts 
+                    i.coderbase 
+                    span.count 3
+    .writings-container
+        .post
+            .languages
+                .language.sass
+            .title SCSS for Active Tabs
+            .body
+                p I’ve seen a couple of different ways for an active tab to get rid of the bottom border.  Either a `margin-bottom: -1px;` or a `top: 1px;`, but here is a great method that doesn’t alter the layout or height of your tabs:
+                pre.code 
+                    |.active {
+                    |   position: relative;
+                    |   background-color: white;
+                    | 
+                    |   &:after {
+                    |       display: block;
+                    |       content: "";
+                    |       position: absolute;
+                    |       bottom: -1px;
+                    |       width: 100%;
+                    |       left: 0;
+                    |       border-bottom: 1px solid white;
+                    |   }
+                    |}
+                    | 
+                p Here the :after class is used to hide the bottom border.  Works in all modern browsers and IE 9+.
+        .recommended
+            .items
+                .item
+                    .languages
+                        .language.sass
+                    .title This is the Title of Another Post
+                .item
+                    .languages
+                        .language.javascript
+                    .title This is the Title of Another Post That is a Little Longer

@@ -1,0 +1,37 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "homepage": "http://project.com",
+  "description": "project",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:adamwdraper/appular-express-app.git"
+  },
+  "dependencies": {
+    "express": "~3.1.0",
+    "jade": "~0.30.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-open": "~0.2.0",
+    "grunt-concurrent": "~0.3.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-appular-docs": ">=0.1.0",
+    "grunt-express-server": "~0.4.5",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-contrib-jade": "~0.8.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": {
+    "name": "Adam Draper",
+    "email": "adamwdraper@gmail.com",
+    "url": "http://github.com/adamwdraper"
+  },
+  "license": "BSD"
+}

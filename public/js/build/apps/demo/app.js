@@ -1,0 +1,1 @@
+define("apps/demo/app",["jquery","underscore","backbone"],function(e,t,n){var r=n.App.extend({params:{keyword:{value:"tacos"},location:{value:"San Francisco, CA"},sortBy:{value:""},sortOrder:{value:"asc"},page:{value:1},count:{value:10,addToUrl:!1}},initialize:function(){},render:function(){return n.trigger("app:initialized"),this}});return r});

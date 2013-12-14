@@ -1,0 +1,54 @@
+// Grays -------------------------
+$color-black: #000;
+$color-gray-darkest: #111;
+$color-gray-darker: #333;
+$color-gray-dark: #666;
+$color-gray: #999;
+$color-gray-light: #CCC;
+$color-gray-lighter: #EFEFEF;
+$color-gray-lightest: #F9F9F9;
+$color-white: #fff;
+
+$color-grays:
+    black,
+    gray-darkest,
+    gray-darker,
+    gray-dark,
+    gray,
+    gray-light,
+    gray-lighter,
+    gray-lightest,
+    white;
+
+$color-grays-vars:
+    $color-black,
+    $color-gray-darkest,
+    $color-gray-darker,
+    $color-gray-dark,
+    $color-gray,
+    $color-gray-light,
+    $color-gray-lighter,
+    $color-gray-lightest,
+    $color-white;
+
+
+// Languages colors
+// Ment to match githubs colors: https://github.com/doda/github-language-colors/blob/master/colors.json
+// -------------------------
+$color-javascript: #f15501;
+$color-sass: pink;
+
+$color-languages:
+    javascript,
+    sass;
+
+$color-languages-vars:
+    $color-javascript,
+    $color-sass;
+
+// Social colors
+$color-social-twitter: #00ACED;
+
+$color-user-background: #fcfcfc;
+$color-works-background: white;
+$color-writings-background: white;

@@ -1,0 +1,230 @@
+// Libraries ---------------------------------
+@import "../libraries/bourbon/bourbon";
+@import "../libraries/normalize/normalize";
+@import "../libraries/coderbase/coderbase";
+
+$spacer: 2rem;
+
+$seperator: 1px solid $color-gray-lighter;
+
+$header-height: 2.5rem;
+
+$user-container-width: 20%;
+$works-container-width: 20%;
+$writings-container-width: 60%;
+
+// It makes math dead simple. - http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+* {
+    @include box-sizing(border-box);
+}
+
+// Project CSS
+html, body {
+    height: 100%;
+    font-family: "Myriad Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    color: $color-gray-darker;
+}
+    
+%header {
+    position: fixed;
+    line-height: $header-height;
+    font-weight: bold;
+    top: 0;
+    padding-left: $spacer;
+    border-bottom: $seperator;
+    color: $color-gray-dark;
+    z-index: 1;
+        
+    i {
+        font-size: 1.25em;
+    }
+}
+
+.works-header {
+    @extend %header;
+    width: $works-container-width;
+    left: $user-container-width;
+    border-right: $seperator;
+    background-color: $color-works-background;
+}
+
+.writings-header {
+    @extend %header;
+    width: $writings-container-width;
+    left: $user-container-width + $works-container-width;
+    background-color: $color-writings-background;
+}
+
+%container {
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
+.user-container {
+    @extend %container;
+    width: $user-container-width;
+    border-right: $seperator;
+    background-color: $color-user-background;
+
+    .user {
+        padding: $spacer;
+    }
+
+    .photo {
+        height: 5em;
+        width: 5em;
+        background-color: $color-gray;
+    }
+
+    .name {
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: $spacer;
+    }
+
+    .tweet {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .handle {
+            @extend %header;
+            position: static;
+            border-top: $seperator;
+        }
+
+        .text {
+            padding: 0.75rem $spacer $spacer;
+            overflow: hidden;
+        }
+    }
+}
+
+.works-container {
+    @extend %container;
+    width: $works-container-width;
+    border-right: $seperator;
+    padding-top: $header-height;
+    overflow-y: auto;
+    background-color: $color-works-background;
+
+    .project {
+        border-bottom: $seperator;
+        padding: 0 $spacer $spacer;
+
+        .name {
+            margin-top: ($spacer / 2);
+            font-size: 1.5em;
+        }
+
+        .github {
+            @include transition(color 0.2s ease);
+            color: $color-gray-light;
+            vertical-align: baseline;
+            font-size: .8em;
+        }
+
+        .description {
+            font-size: .9em;
+            color: $color-gray-dark;
+        }
+
+        .stats {
+            @include clearfix;
+            margin-top: ($spacer / 2);
+            font-size: .75em;
+
+            .stat {
+                @include transition(color 0.2s ease);
+                color: $color-gray-light;
+                display: block;
+                float: left;
+                margin-right: 2em;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .github, .stat {
+                color: $color-gray-dark;
+            }
+        }
+    }
+}
+
+.writings-container {
+    @extend %container;
+    width: $writings-container-width;
+    padding-top: $header-height;
+    overflow-y: auto;
+    background-color: $color-writings-background;
+
+    .post {
+        border-bottom: $seperator;
+        padding: 0 $spacer $spacer;
+
+        .title {
+            margin-top: ($spacer / 2);
+            font-size: 2.5em;
+        }
+
+        .body {
+            margin-top: ($spacer / 2);
+            font-size: 1.2em;
+        }
+
+        .code {
+            border: $seperator;
+            background-color: $color-user-background;
+            margin: $spacer 0;
+            padding: 0 $spacer;
+            font-size: .85em;
+        }
+    }
+
+    .recommended {
+        display: table;
+        width: 100%;
+
+        .items {
+            display: table-row;
+        }
+
+        .item {
+            display: table-cell;
+            padding: 0 $spacer $spacer;
+            border-right: $seperator;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        .title {
+            font-size: 1.5em;
+            margin-top: ($spacer / 2); 
+        }
+    }
+}
+
+.languages {
+    @include clearfix;
+
+    .language {
+        display: block;
+        float: left;
+        height: .3rem;
+        width: 2rem;
+
+        // Types
+        @for $i from 1 through length($color-languages) {
+            &.#{nth($color-languages, $i)} {
+                background-color: nth($color-languages-vars, $i);
+            }
+        }
+    }
+}

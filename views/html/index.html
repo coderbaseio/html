@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Appular Project</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body data-appular-app="default">
+    <header> 
+    </header>
+    <div class="works-header">WORKS</div>
+    <div class="writings-header">WRITINGS</div>
+    <div class="user-container">
+      <div class="user">
+        <div class="photo"></div>
+        <div class="name">Adam Draper</div>
+      </div>
+      <div class="tweet">
+        <div class="handle">@adamwdraper</div>
+        <div class="text">Numeral.js - easily format javascript numbers <a href="http://adamwdraper.github.com/Numeral-js/">http://adamwdraper.github.com/Numeral-js/</a></div>
+      </div>
+    </div>
+    <div class="works-container">
+      <div class="project">
+        <div class="languages"><span class="javascript"></span></div>
+        <div class="name">Numeral.js</div>
+        <div class="description">A javascript library for formatting and manipulating numbers.</div>
+        <div class="stats"><span class="stars">209</span><span class="posts">3</span></div>
+      </div>
+      <div class="project">
+        <div class="languages"><span class="javascript"></span><span class="sass"></span></div>
+        <div class="name">Appular</div>
+        <div class="description">A modular JavaScript organizational schema based on Backbone and RequireJs</div>
+        <div class="stats"><span class="posts">3</span></div>
+      </div>
+      <div class="project">
+        <div class="languages"><span class="javascript"></span></div>
+        <div class="name">Numeral.js</div>
+        <div class="description">A javascript library for formatting and manipulating numbers.</div>
+        <div class="stats"></div>
+      </div>
+      <div class="project">
+        <div class="languages"><span class="javascript"></span><span class="sass"></span></div>
+        <div class="name">Appular</div>
+        <div class="description">A modular JavaScript organizational schema based on Backbone and RequireJs</div>
+        <div class="stats"><span class="stars">209</span></div>
+      </div>
+      <div class="project">
+        <div class="languages"><span class="javascript"></span></div>
+        <div class="name">Numeral.js</div>
+        <div class="description">A javascript library for formatting and manipulating numbers.</div>
+        <div class="stats"></div>
+      </div>
+      <div class="project">
+        <div class="languages"><span class="javascript"></span><span class="sass"></span></div>
+        <div class="name">Appular</div>
+        <div class="description">A modular JavaScript organizational schema based on Backbone and RequireJs</div>
+        <div class="stats"><span class="posts">3</span></div>
+      </div>
+    </div>
+    <div class="writings-container">
+      <div class="post">
+        <div class="languages"><span class="sass"></span></div>
+        <div class="title">SCSS for Active Tabs</div>
+        <div class="body">
+          <p>I’ve seen a couple of different ways for an active tab to get rid of the bottom border.  Either a `margin-bottom: -1px;` or a `top: 1px;`, but here is a great method that doesn’t alter the layout or height of your tabs:</p>
+          <pre class="code"> 
+.active {
+  position: relative;
+  background-color: $menu-tabular-item-active-background-color;
+ 
+  &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+      left: 0;
+      border-bottom: 1px solid $menu-tabular-item-active-background-color;
+  }
+}</pre>
+          <p>Here the :after class is used to hide the bottom border.  Works in all modern browsers and IE 9+.</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+    </footer>
+    <script src="/js/build/appular.js"></script>
+  </body>
+</html>
