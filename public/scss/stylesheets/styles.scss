@@ -81,7 +81,21 @@ html, body {
     .name {
         font-size: 2em;
         font-weight: bold;
-        margin-top: $spacer;
+        margin-top: .5em;
+    }
+
+    .madlib {
+        color: $color-gray-dark;
+
+        .i {
+        }
+
+        .like {
+        }
+
+        .blank {
+            border-bottom: 1px dashed $color-gray-light;
+        }
     }
 
     .tweet {
@@ -93,7 +107,7 @@ html, body {
         .handle {
             @extend %header;
             position: static;
-            border-top: $seperator;
+            border: none;
         }
 
         .text {
@@ -167,6 +181,11 @@ html, body {
         border-bottom: $seperator;
         padding: 0 $spacer $spacer;
 
+        .date {
+            font-size: .75em;
+            color: $color-gray-light;
+        }
+
         .title {
             margin-top: ($spacer / 2);
             font-size: 2.5em;
@@ -175,14 +194,28 @@ html, body {
         .body {
             margin-top: ($spacer / 2);
             font-size: 1.2em;
+
+            p {
+                line-height: 1.5em;
+            }
         }
 
-        .code {
+        pre.code {
             border: $seperator;
             background-color: $color-user-background;
-            margin: $spacer 0;
             padding: 0 $spacer;
             font-size: .85em;
+        }
+
+        span.code {
+            border: $seperator;
+            background-color: $color-user-background;
+            padding: 0 1em;
+            font-size: .85em;
+            font-size: .75em;
+            display: inline-block;
+            line-height: 1.5em;
+            vertical-align: middle;
         }
     }
 

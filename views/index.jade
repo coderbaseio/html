@@ -13,6 +13,15 @@ block content
         .user
             .photo
             .name Adam Draper
+            .madlib
+                p.i I 
+                    span.blank code
+                    |  at 
+                    span.blank Coderbase.io
+                    | .
+                p.like I like 
+                    span.blank diy projects, tennis and playing drums
+                    | .
         .tweet
             .handle <i class="twitter"></i> @adamwdraper
             .text @momentjs enjoyed moment so much, i made a simple formatter for numbers <a href="http://adamwdraper.github.com/Numeral-js/">numeral.js</a> that works much the same way
@@ -65,8 +74,10 @@ block content
             .languages
                 .language.sass
             .title SCSS for Active Tabs
+            .sub
+                span.date November 10, 2013
             .body
-                p I’ve seen a couple of different ways for an active tab to get rid of the bottom border.  Either a `margin-bottom: -1px;` or a `top: 1px;`, but here is a great method that doesn’t alter the layout or height of your tabs:
+                p I’ve seen a couple of different ways for an active tab to get rid of the bottom border.  Either a <span class="code">margin-bottom: -1px;</span> or a `top: 1px;`, but here is a great method that doesn’t alter the layout or height of your tabs:
                 pre.code 
                     |.active {
                     |   position: relative;

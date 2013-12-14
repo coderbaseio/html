@@ -421,7 +421,11 @@ html, body {
   .user-container .name {
     font-size: 2em;
     font-weight: bold;
-    margin-top: 2rem; }
+    margin-top: .5em; }
+  .user-container .madlib {
+    color: #666666; }
+    .user-container .madlib .blank {
+      border-bottom: 1px dashed #cccccc; }
   .user-container .tweet {
     position: absolute;
     bottom: 0;
@@ -429,7 +433,7 @@ html, body {
     right: 0; }
     .user-container .tweet .handle {
       position: static;
-      border-top: 1px solid #efefef; }
+      border: none; }
     .user-container .tweet .text {
       padding: 0.75rem 2rem 2rem;
       overflow: hidden; }
@@ -486,18 +490,31 @@ html, body {
   .writings-container .post {
     border-bottom: 1px solid #efefef;
     padding: 0 2rem 2rem; }
+    .writings-container .post .date {
+      font-size: .75em;
+      color: #cccccc; }
     .writings-container .post .title {
       margin-top: 1rem;
       font-size: 2.5em; }
     .writings-container .post .body {
       margin-top: 1rem;
       font-size: 1.2em; }
-    .writings-container .post .code {
+      .writings-container .post .body p {
+        line-height: 1.5em; }
+    .writings-container .post pre.code {
       border: 1px solid #efefef;
       background-color: #fcfcfc;
-      margin: 2rem 0;
       padding: 0 2rem;
       font-size: .85em; }
+    .writings-container .post span.code {
+      border: 1px solid #efefef;
+      background-color: #fcfcfc;
+      padding: 0 1em;
+      font-size: .85em;
+      font-size: .75em;
+      display: inline-block;
+      line-height: 1.5em;
+      vertical-align: middle; }
   .writings-container .recommended {
     display: table;
     width: 100%; }
@@ -528,4 +545,4 @@ html, body {
     .languages .language.javascript {
       background-color: #f15501; }
     .languages .language.sass {
-      background-color: pink; }
+      background-color: #1f085e; }
