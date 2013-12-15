@@ -222,8 +222,13 @@ html, body {
         }
 
         .share {
-            padding: 1em 0;
             color: $color-gray-light;
+            margin-top: 2em;
+
+            .socials {
+                padding: 1em 0;
+                border-top: 1px solid $color-gray-lightest;
+            }
 
             i {
                 @include transition(color 0.2s ease);
@@ -231,6 +236,10 @@ html, body {
                 font-size: 1.25em;
                 margin-right: 0.75em;
                 cursor: pointer;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
             .twitter:hover {

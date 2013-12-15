@@ -526,8 +526,11 @@ html, body {
       line-height: 1.5em;
       vertical-align: middle; }
     .writings-container .post .share {
-      padding: 1em 0;
-      color: #cccccc; }
+      color: #cccccc;
+      margin-top: 2em; }
+      .writings-container .post .share .socials {
+        padding: 1em 0;
+        border-top: 1px solid #f2f2f2; }
       .writings-container .post .share i {
         -webkit-transition: color 0.2s ease;
         -moz-transition: color 0.2s ease;
@@ -536,6 +539,8 @@ html, body {
         font-size: 1.25em;
         margin-right: 0.75em;
         cursor: pointer; }
+        .writings-container .post .share i:last-child {
+          margin-right: 0; }
       .writings-container .post .share .twitter:hover {
         color: #00aced; }
       .writings-container .post .share .facebook:hover {
