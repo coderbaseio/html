@@ -28,18 +28,29 @@ i {
     &.github:before {
         content: "\e600";
     }
+
     &.twitter:before {
         content: "\e601";
-        color: $color-social-twitter;
     }
+
     &.coderbase:before {
         content: "\e602";
     }
+
     &.star:before {
         content: "\e603";
     }
+
     &.portfolio:before {
         content: "\e604";
+    }
+
+    &.facebook:before {
+        content: "\e605";
+    }
+    
+    &.google-plus:before {
+        content: "\e606";
     }
 }
 

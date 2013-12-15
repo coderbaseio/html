@@ -360,14 +360,17 @@ i {
   i.github:before {
     content: "\e600"; }
   i.twitter:before {
-    content: "\e601";
-    color: #00aced; }
+    content: "\e601"; }
   i.coderbase:before {
     content: "\e602"; }
   i.star:before {
     content: "\e603"; }
   i.portfolio:before {
     content: "\e604"; }
+  i.facebook:before {
+    content: "\e605"; }
+  i.google-plus:before {
+    content: "\e606"; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -424,6 +427,8 @@ html, body {
     margin-top: .5em; }
   .user-container .madlib {
     color: #666666; }
+    .user-container .madlib .i, .user-container .madlib .like {
+      margin: 0.5em 0; }
     .user-container .madlib .blank {
       border-bottom: 1px dashed #cccccc; }
   .user-container .tweet {
@@ -432,8 +437,13 @@ html, body {
     left: 0;
     right: 0; }
     .user-container .tweet .handle {
+      -webkit-transition: color 0.2s ease;
+      -moz-transition: color 0.2s ease;
+      transition: color 0.2s ease;
       position: static;
       border: none; }
+      .user-container .tweet .handle:hover {
+        color: #00aced; }
     .user-container .tweet .text {
       padding: 0.75rem 2rem 2rem;
       overflow: hidden; }
@@ -492,9 +502,9 @@ html, body {
     padding: 0 2rem 2rem; }
     .writings-container .post .date {
       font-size: .75em;
-      color: #cccccc; }
+      color: #cccccc;
+      margin-bottom: 0; }
     .writings-container .post .title {
-      margin-top: 1rem;
       font-size: 2.5em; }
     .writings-container .post .body {
       margin-top: 1rem;
@@ -515,6 +525,23 @@ html, body {
       display: inline-block;
       line-height: 1.5em;
       vertical-align: middle; }
+    .writings-container .post .share {
+      padding: 1em 0;
+      color: #cccccc; }
+      .writings-container .post .share i {
+        -webkit-transition: color 0.2s ease;
+        -moz-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+        color: #cccccc;
+        font-size: 1.25em;
+        margin-right: 0.75em;
+        cursor: pointer; }
+      .writings-container .post .share .twitter:hover {
+        color: #00aced; }
+      .writings-container .post .share .facebook:hover {
+        color: #3b579d; }
+      .writings-container .post .share .google-plus:hover {
+        color: #dd4b39; }
   .writings-container .recommended {
     display: table;
     width: 100%; }

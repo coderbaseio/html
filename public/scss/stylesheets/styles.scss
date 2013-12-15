@@ -87,10 +87,8 @@ html, body {
     .madlib {
         color: $color-gray-dark;
 
-        .i {
-        }
-
-        .like {
+        .i, .like {
+            margin: 0.5em 0;
         }
 
         .blank {
@@ -106,8 +104,13 @@ html, body {
 
         .handle {
             @extend %header;
+            @include transition(color 0.2s ease);
             position: static;
             border: none;
+
+            &:hover {
+                color: $color-social-twitter;
+            }
         }
 
         .text {
@@ -184,10 +187,10 @@ html, body {
         .date {
             font-size: .75em;
             color: $color-gray-light;
+            margin-bottom: 0;
         }
 
         .title {
-            margin-top: ($spacer / 2);
             font-size: 2.5em;
         }
 
@@ -216,6 +219,31 @@ html, body {
             display: inline-block;
             line-height: 1.5em;
             vertical-align: middle;
+        }
+
+        .share {
+            padding: 1em 0;
+            color: $color-gray-light;
+
+            i {
+                @include transition(color 0.2s ease);
+                color: $color-gray-light;
+                font-size: 1.25em;
+                margin-right: 0.75em;
+                cursor: pointer;
+            }
+
+            .twitter:hover {
+                color: $color-social-twitter;
+            }
+
+            .facebook:hover {
+                color: $color-social-facebook;
+            }
+
+            .google-plus:hover {
+                color: $color-social-google-plus;
+            }
         }
     }
 
